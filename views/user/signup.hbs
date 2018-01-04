@@ -1,0 +1,32 @@
+
+<div class="register-page">
+  <div class="form">
+    {{#if hasErrors}}
+        <div class="alert alert-danger">
+          {{# each messages}}
+            <p>{{this}}</p>
+          {{/each}}
+        </div>
+    {{/if}}
+    <form action="/user/signup" method="post">
+
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" value="" class="form-control" pattern=".{6,}" title="Password must more than 6 characters" required>
+      </div>
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <span>Click <a href="/user/signin">here</a> to sign in!</span>
+
+  </div>
+</div>

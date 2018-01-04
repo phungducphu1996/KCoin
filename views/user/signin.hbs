@@ -1,0 +1,28 @@
+<div class="login-page">
+  <div class="form">
+   {{#if hasErrors}}
+        <div class="alert alert-danger">
+          {{# each messages}}
+            <p>{{this}}</p>
+          {{/each}}
+        </div>
+    {{/if}}
+
+    <form action="/user/signin" method="post">
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" value="" class="form-control" required>
+      </div>
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+  <span>Click <a href="/user/signup">here</a> to sign up!</span>
+  <span><a href="/forgotpwd">Forgot password?</a></span>
+  </div>
+
+</div>

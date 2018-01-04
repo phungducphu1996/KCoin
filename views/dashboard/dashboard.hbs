@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Dashboard</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="/stylesheets/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="/stylesheets/paper-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/stylesheets/demo.css" rel="stylesheet" />
+
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/themify-icons.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="index.php"><small><i class="icon-group"></i> </small></a>
+                    <ul class="nav ace-nav pull-right">
+                        <li class="light-blue user-profile">
+                            <a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">
+                                <img alt="User's Avatar" src="/images/avatar.png" class="nav-user-photo" />
+                                <span id="user_info">
+                                    <small>Welcome,</small>{{username}}</span>
+                                <i class="icon-caret-down"></i>
+                            </a>
+                            <ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+                                <li><a href="/user/logout"><i class="icon-off"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul><!--/.polar-nav-->
+                </div><!--/.container-fluid-->
+            </div><!--/.navbar-inner-->
+        </div><!--/.navbar-->
+   
+        <div class="container-fluid" id="main-container">
+            <a href="#" id="menu-toggler"><span></span></a><!-- menu toggler -->
+            <div id="sidebar">
+                <ul class="nav nav-list">
+                    <li>
+
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="ti-panel"></i>
+                        <p>Wallet</p>
+                    </a>
+                </li>
+             
+                        </a>
+                    </li>
+
+                </ul>
+                
+
+    
+
+
+        <div class="content">
+            <div class="container-fluid">
+             
+                      <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Balance</h4>
+                            </div>
+                            <div class="content">
+                                <p class="category"><b> ${{usable_balance}}</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                     <div class="container-fluid">
+                    <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Wallet Address:</h4>
+                            </div>
+                            <div class="content">
+                                <p class="category"><b>{{transaction_address}}</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="copyright pull-right">
+              
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+</body>
+   
+	</script>
+</html>
